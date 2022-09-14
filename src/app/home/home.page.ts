@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Geolocation } from '@capacitor/geolocation';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  latitude: number;
+  longitude: number;
+  altitude: number;
 
-  constructor() {}
+  constructor() {
+    this.getLocation();
+  }
+
+  async getLocation() {
+    const position = await Geolocation.getCurrentPosition();
+    this.latitude = position.coords.latitude;
+    this.longitude = position.coords.longitude;
+    this.altitude = position.coords.altitude;
+  }
 
 }

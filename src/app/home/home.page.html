@@ -8,24 +8,25 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-list-header>Coordinates</ion-list-header>
+    <ion-list-header>Your location coordinates</ion-list-header>
     <ion-item>
       <ion-label>
         <h2>Latitude</h2>
-        <h3>Not Available</h3>
+        <h3>{{ latitude }}</h3>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         <h2>Longitude</h2>
-        <h3>Not Available</h3>
+        <h3>{{ longitude }}</h3>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         <h2>Altitude</h2>
-        <h3>Not Available</h3>
+        <h3>{{ altitude }}</h3>
       </ion-label>
     </ion-item>
   </ion-list>
+  <ion-button (click) = "getUserLocation()">Try Again</ion-button>
 </ion-content>
