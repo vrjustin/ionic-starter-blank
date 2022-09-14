@@ -24,3 +24,22 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.ion-color-bcbsm_btn {
+	--ion-color-base: var(--ion-color-bcbsm_btn);
+	--ion-color-base-rgb: var(--ion-color-bcbsm_btn-rgb);
+	--ion-color-contrast: var(--ion-color-bcbsm_btn-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-bcbsm_btn-contrast-rgb);
+	--ion-color-shade: var(--ion-color-bcbsm_btn-shade);
+	--ion-color-tint: var(--ion-color-bcbsm_btn-tint);
+}
+
+.bcbsm-label {
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  .bcbsm-label {
+    font-size: 16px;
+  }
+}
